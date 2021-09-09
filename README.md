@@ -29,3 +29,4 @@ And then, filter by the scopes you're interested in. See also: https://socket.io
 ## License
 
 [MIT](/LICENSE)
+# socket.io-client
