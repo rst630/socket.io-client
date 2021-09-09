@@ -2586,7 +2586,7 @@ var Socket = /*#__PURE__*/function (_Emitter) {
       transportOptions: {},
       closeOnBeforeunload: true
     }, opts);
-    _this.opts.path = _this.opts.path.replace(/\/$/, "") + "/";
+    _this.opts.path = _this.opts.path.replace(/\/$/, "");
 
     if (typeof _this.opts.query === "string") {
       _this.opts.query = parseqs.decode(_this.opts.query);
@@ -2643,9 +2643,9 @@ var Socket = /*#__PURE__*/function (_Emitter) {
       debug('creating transport "%s"', name);
       var query = clone(this.opts.query); // append engine.io protocol identifier
 
-      query.EIO = parser.protocol; // transport name
+      // query.EIO = parser.protocol; // transport name
 
-      query.transport = name; // session id if we already have one
+      // query.transport = name; // session id if we already have one
 
       if (this.id) query.sid = this.id;
 
